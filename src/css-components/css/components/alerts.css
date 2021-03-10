@@ -1,0 +1,10 @@
+.alert {
+  background-color: #CFE2FF;
+  height: 5.5rem;
+  width: 60rem;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  color: #4C4C98;
+}

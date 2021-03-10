@@ -1,0 +1,24 @@
+.no-shadow {
+  width: 60rem;
+  height: 6rem;
+  background-color: #F8F9FA;
+  border-radius: 0.5rem;
+}
+.sm-shadow {
+  width: 60rem;
+  height: 6rem;
+  box-shadow: 0px 1px 3px grey;
+  border-radius: 0.5rem;
+}
+.md-shadow {
+  width: 60rem;
+  height: 6rem;
+  box-shadow: 0px 2px 6px grey;
+  border-radius: 0.5rem;
+}
+.lg-shadow {
+  width: 60rem;
+  height: 6rem;
+  box-shadow: 2px 4px 15px grey;
+  border-radius: 0.5rem;
+}

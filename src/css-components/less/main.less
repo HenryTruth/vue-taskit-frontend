@@ -1,0 +1,35 @@
+@import 'components/buttons';
+@import 'utilities/color';
+@import 'components/forms';
+
+*,
+&::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+// body{
+//     background-color: #464646;
+// }
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style:none;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-rows: repeat(auto,auto);
+    grid-template-columns: 1fr;
+    // place-items: center;
+    height: 100vh;
+}

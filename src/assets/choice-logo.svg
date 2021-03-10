@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="456.227" height="443.12" viewBox="0 0 456.227 443.12">
+  <defs>
+    <path id="path-1" fill-rule="evenodd" d="M59.90372316 93.68223452h328.41954102L210.59997141 333.4379761 59.90372316 93.68223452z"/>
+    <filter id="filter-2" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="8" in="SourceAlpha" result="shadow-1-feOffset-shadow"/>
+      <feGaussianBlur in="shadow-1-feOffset-shadow" result="shadow-1-feGaussianBlur-shadow" stdDeviation="10.843"/>
+      <feColorMatrix in="shadow-1-feGaussianBlur-shadow" result="shadow-1-feColorMatrix-shadow" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+    <filter id="filter-3" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" result="innershadow-1-feGaussianBlur-innershadow" stdDeviation="7.229"/>
+      <feOffset dx="2" dy="4" in="innershadow-1-feGaussianBlur-innershadow" result="innershadow-1-feOffset-innershadow"/>
+      <feComposite in="innershadow-1-feOffset-innershadow" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="innershadow-1-feOffset-innershadow"/>
+      <feColorMatrix in="innershadow-1-feOffset-innershadow" result="innershadow-1-feColorMatrix-innershadow" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+  <g transform="rotate(-39.000014 224.11349367 213.5601053)">
+    <g>
+      <use fill="black" stroke="black" stroke-width="3" filter="url(#filter-2)" xlink:href="#path-1"/>
+      <use fill="rgb(71,47,146)" xlink:href="#path-1"/>
+      <use fill="black" filter="url(#filter-3)" xlink:href="#path-1"/>
+      <use fill-opacity="0" stroke="rgb(71,47,146)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="3" xlink:href="#path-1"/>
+    </g>
+    <text font-size="0" style="white-space:pre" fill="rgb(255,255,255)">
+      <tspan x="185.164" y="225.324" font-family="Roboto" font-size="110" font-weight="400" style="white-space:pre;text-transform:none">T</tspan>
+    </text>
+  </g>
+</svg>

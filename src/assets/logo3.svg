@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.705" height="46.705" viewBox="0 0 61.705 46.705">
+  <defs>
+    <rect id="rect-1" width="57" height="44" x="2.352" y=".352"/>
+    <path id="path-2" fill-rule="evenodd" d="M2.35231505 2.35231505h57l-27.76923076 42-29.23076924-42z"/>
+  </defs>
+  <g>
+    <g>
+      <use fill="rgb(255,255,255)" xlink:href="#path-2"/>
+      <use fill-opacity="0" stroke="rgb(128,128,128)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1" xlink:href="#path-2"/>
+    </g>
+    <text font-size="0" style="white-space:pre">
+      <tspan x="19.517" y="37.352" fill="rgb(71,47,146)" font-family="Roboto" font-size="40" font-weight="400" style="white-space:pre;text-transform:none">T</tspan>
+    </text>
+  </g>
+</svg>

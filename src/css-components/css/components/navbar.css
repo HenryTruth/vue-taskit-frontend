@@ -1,0 +1,24 @@
+nav {
+  background-color: #472F92;
+  display: grid;
+  height: 9vh;
+  grid-template-columns: 1fr 9fr;
+}
+nav span img {
+  height: 6rem;
+  width: 8rem;
+  margin: 0.5rem 0.5rem;
+  margin-left: 2rem;
+}
+nav ul {
+  align-self: start;
+  margin-top: 2rem;
+}
+nav ul li {
+  display: inline;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+nav ul li a {
+  color: white;
+}
