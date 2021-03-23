@@ -1,9 +1,9 @@
 <template>
     <header id="main-header" v-if="showNav">
-        <nav>
+        <nav :class="{'active':toggled}">
             <div class="menu-icons">
-                <img class="icon ion-md-menu" src="C:\Users\hp\Desktop\Vue_taskit\vue_taskit\src\assets\menu.svg" alt="">
-                <img src="./../../assets/cancel.svg" alt="" class="icon ion-md-close">
+                <img class="icon ion-md-menu" src="./../../assets/menu.svg" alt="" @click="dropNav">
+                <img src="./../../assets/cancel.svg" alt="" :class="{'active':toggled}" class="icon ion-md-close"  @click="dropNav">
             </div>
             <a href="index.html" class="logo">
                 <img src="./../../assets/logo3.svg" alt="" @click="bb">
@@ -45,13 +45,13 @@
         </nav>
     </header>
     <header id="second-header" v-else>
-        <nav>
+        <nav :class="{'active':toggled}">
             <div class="menu-icons">
-                <img class="icon ion-md-menu" src="C:\Users\hp\Desktop\Vue_taskit\vue_taskit\src\assets\menu.svg" alt="">
-                <img src="./../../assets/cancel.svg" alt="" class="icon ion-md-close">
+                <img class="icon ion-md-menu" src="./../../assets/menu.svg" alt="" @click="dropNav">
+                <img src="./../../assets/cancel.svg" alt="" :class="{'active':toggled}" class="icon ion-md-close"  @click="dropNav">
             </div>
             <a href="index.html" class="logo">
-                <img src="./../../assets/logo3.svg" alt="">
+                <img src="./../../assets/logo3.svg" alt="" @click="bb">
             </a>
             <ul class="nav-list">
                 <li>
@@ -68,7 +68,7 @@
                     <a href="#">About Us</a>
                 </li>
             </ul>
-            <ul class="nav-list2">
+            <ul class="nav-list2" :class="{'active':toggled}">
                 <li class="li-li">
                     <router-link to="" style="color:white">
                        Welcome {{strUser}}
@@ -99,7 +99,8 @@ export default {
         return{
             username:store.state.username,
             active:store.state.authenticated,
-            showData:true
+            showData:true,
+            toggle:false
         }
     },
 
@@ -115,11 +116,15 @@ export default {
         strUser(){
             return this.username
 
+        },
+        toggled(){
+            if(this.toggle){
+                return 'active'
+            }
         }
     },
 
     mounted(){
-        console.log('mounted')
         if(localStorage.getItem('active')){
             this.active = JSON.parse(localStorage.getItem('active'))
         }
@@ -137,6 +142,9 @@ export default {
     methods:{
         showit(){
             this.showData = !this.showData
+        },
+        dropNav(){
+            return this.toggle = !this.toggle
         }
     }
     

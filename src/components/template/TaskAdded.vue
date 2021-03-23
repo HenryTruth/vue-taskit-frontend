@@ -265,7 +265,10 @@ export default {
       justify-self: center;
       align-self: center;
       height: 50rem;
-      
+      @media screen and (max-width:769px){
+            margin-right: 15rem;
+
+      }
 
 
       img{

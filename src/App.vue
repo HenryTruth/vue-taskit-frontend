@@ -152,7 +152,7 @@ nav{
             position: fixed;
             top: 0;
             left: 0;
-            height: 50vh;
+            height: 60vh;
             display: none;
             flex-direction: column;
             align-items: initial;   
