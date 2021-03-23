@@ -180,7 +180,7 @@
     <footer>
         <div class="footer-content">
             <p><span>Github</span><span>Twitter</span><span>About Me</span></p>
-            <p>Designed and built by Truth with the help of the sytntax team</p>
+            <p>Designed and built by Truth with the help of the syntax team</p>
             <p class="p-footer">Copyright 2021 all right   reserved</p>
         </div>
     </footer>

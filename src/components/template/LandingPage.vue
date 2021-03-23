@@ -1,6 +1,5 @@
 <template>
-{{!active}}
-    <header id="main-header" v-if="!active">
+    <header id="main-header" v-if="showNav">
         <nav>
             <div class="menu-icons">
                 <img class="icon ion-md-menu" src="C:\Users\hp\Desktop\Vue_taskit\vue_taskit\src\assets\menu.svg" alt="">
@@ -62,12 +61,7 @@
                 </li>
                 <li>
                     <router-link to="/login">
-                        Login
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/signup">
-                        Signup
+                        log out
                     </router-link>
                 </li>
                 <li>
@@ -75,8 +69,20 @@
                 </li>
             </ul>
             <ul class="nav-list2">
-                <li>
-                    <a href="completed_task.html"><img src="./../../assets/completed-nav.svg" alt=""></a>
+                <li class="li-li">
+                    <router-link to="" style="color:white">
+                       Welcome {{strUser}}
+                    </router-link>
+                </li>
+                <li v-if="showIcon">
+                    <router-link to="/completedtask">
+                        <img src="./../../assets/completed-nav.svg" alt="" @click="showit">
+                    </router-link>
+                </li>
+                <li v-else>
+                    <router-link to="/taskadded">
+                        <img src="./../../assets/task-run.svg" alt="" @click="showit">
+                    </router-link>
                 </li>
             </ul>
         </nav>
@@ -91,27 +97,46 @@ import { store } from '../../store'
 export default {
     data(){
         return{
-            active:store.state.authenticated
-        }
-    },
-    computed:{
-        notAuth(){
-            return this.active
+            username:store.state.username,
+            active:store.state.authenticated,
+            showData:true
         }
     },
 
+    computed:{
+        showIcon(){
+            return this.showData
+        },
+
+        showNav(){
+            return this.active
+        },
+
+        strUser(){
+            return this.username
+
+        }
+    },
 
     mounted(){
         console.log('mounted')
-            this.active = localStorage.getItem('active')
-            console.log(this.active)
-        
+        if(localStorage.getItem('active')){
+            this.active = JSON.parse(localStorage.getItem('active'))
+        }
+
+        if(localStorage.getItem('username')){
+            this.username = localStorage.getItem('username')
+        } 
     },
 
     watch:{
         active(newval,oldvalue){
             localStorage.setItem('active', newval)
-            console.log(localStorage)
+        },
+    },
+    methods:{
+        showit(){
+            this.showData = !this.showData
         }
     }
     
@@ -124,7 +149,6 @@ export default {
         background-color:#472F92;
         width: 100%;
         display: block;
-
     }
 
 </style>

@@ -17,11 +17,10 @@ export default{
 
     data(){
         return{
-            authenticated:store.state.authenticated
+            authenticated:store.state.authenticated,
+            routeVal:null
         }
     },
-    
-
 
 }
 
@@ -201,7 +200,14 @@ nav{
 
         li{
             display: inline-block;
+            padding: .2rem;
+            // padding: 10rem;
             // margin-top: 2.5rem;
+            img{
+                width: 4rem;
+                height: 2.5rem;
+                color: white;
+            }
             @media screen and (max-width:769px){
                 margin-top: 2.5rem;
                 display: none;
@@ -217,13 +223,13 @@ nav{
            
         }
 
-        li{
-            padding: .2rem;
+        .li-li{
+            display: grid;
+            justify-items: center;
+            width: 400px;
+            font-size: 1.7rem;
 
-            img{
-                width: 4rem;
-                height: 2.5rem;
-            }
+            
         }
     }
 

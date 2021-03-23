@@ -1,10 +1,8 @@
 <template>
         <section class="task">
             <div>
-                <button>
-                    <router-link to="/taskdialogue">
-                        Add Task
-                    </router-link>
+                <button @click="goDialogue">
+                    Add Task
                 </button>
             </div>
             <figure>
@@ -20,11 +18,28 @@ export default {
     data(){
         return{
             authenticated:store.state.authenticated
+            
         }
     },
 
+    beforeRouteEnter(to, from, next){
+        console.log('beforerouteenter')
+        if(localStorage.getItem('active')){
+            next()
+        }else{
+            next('/')
+        }
+    },
     
+
+    methods:{
+        goDialogue(){
+            this.$router.push('/taskdialogue')
+        }
+    }
+        
 }
+
 </script>
 
 <style lang="less" scoped>
