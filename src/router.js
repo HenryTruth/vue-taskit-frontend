@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router/dist/vue-router.esm.js'
 
-import Login from './components/template/login.vue'
+import Login from './components/template/Login.vue'
 import Home from './components/template/Home.vue'
 import SignUp from './components/template/SignUp.vue'
 import AddTask from './components/template/AddTask.vue'
